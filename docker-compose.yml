@@ -1,0 +1,39 @@
+services:
+
+  backend:
+    build:
+      context: ./backend
+
+    container_name: aircraft-backend
+
+    restart: unless-stopped
+
+    ports:
+      - "5000:5000"
+
+    networks:
+      - aircraft-network
+
+
+  frontend:
+    build:
+      context: ./frontend
+
+    container_name: aircraft-frontend
+
+    restart: unless-stopped
+
+    ports:
+      - "3000:80"
+
+    depends_on:
+      - backend
+
+    networks:
+      - aircraft-network
+
+
+networks:
+
+  aircraft-network:
+    driver: bridge
