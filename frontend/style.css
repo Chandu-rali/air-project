@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #111827;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 75px;
+    background: #07111f;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+
+    background:
+        linear-gradient(
+            rgba(3, 12, 25, 0.65),
+            rgba(3, 12, 25, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 8%;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.tagline {
+    color: #38bdf8;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background: #0ea5e9;
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background: #0284c7;
+}
+
+
+/* AIRCRAFT */
+
+.aircraft-section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #0284c7;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin: 10px 0 30px;
+}
+
+#search {
+    width: 350px;
+    max-width: 90%;
+
+    padding: 15px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+
+/* GRID */
+
+.aircraft-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+
+/* CARD */
+
+.aircraft-card {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.aircraft-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.aircraft-card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.manufacturer {
+    color: #0284c7;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.spec {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 14px;
+}
+
+.spec:last-child {
+    border-bottom: none;
+}
+
+
+/* ABOUT */
+
+.about {
+    background: #07111f;
+    color: white;
+
+    padding: 90px 8%;
+}
+
+.about div {
+    max-width: 750px;
+}
+
+.about h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.about p:last-child {
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #030712;
+    color: #94a3b8;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+}
